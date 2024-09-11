@@ -1,3 +1,8 @@
+#### 2024.09.11
+
+1. 整理**[HelloDaemon](https://github.com/xingda920813/HelloDaemon)**
+2. 升级java17，agp8.0，以及更新部分依赖
+
 # HelloDaemon
 
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
@@ -140,7 +145,7 @@ Android 4.4 及以下版本使用 AlarmManager.
 build.gradle 中添加
 
 ```
-compile 'com.xdandroid:hellodaemon:+'
+compile 'top.jessi:hellodaemon:+'
 ```
 
 ### 2. 继承 AbsWorkService, 实现 6 个抽象方法

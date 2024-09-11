@@ -1,4 +1,4 @@
-package com.xdandroid.hellodaemon;
+package top.jessi.hellodaemon;
 
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -14,9 +14,10 @@ import android.os.IBinder;
 
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.*;
+import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
+
 
 public class WatchDogService extends Service {
 

@@ -1,4 +1,4 @@
-package com.xdandroid.hellodaemon;
+package top.jessi.hellodaemon;
 
 import android.app.*;
 import android.content.*;
@@ -6,7 +6,8 @@ import android.content.pm.*;
 import android.net.*;
 import android.os.*;
 import android.provider.*;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import java.util.*;
 

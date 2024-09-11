@@ -1,15 +1,18 @@
-package com.xdandroid.hellodaemon;
+package top.jessi.hellodaemon;
 
 import android.app.*;
 import android.content.*;
 import android.os.*;
-import android.support.annotation.*;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.*;
 
 public final class DaemonEnv {
 
-    private DaemonEnv() {}
+    private DaemonEnv() {
+    }
 
     public static final int DEFAULT_WAKE_UP_INTERVAL = 6 * 60 * 1000;
     private static final int MINIMAL_WAKE_UP_INTERVAL = 3 * 60 * 1000;
@@ -22,10 +25,11 @@ public final class DaemonEnv {
     static final Map<Class<? extends Service>, ServiceConnection> BIND_STATE_MAP = new HashMap<>();
 
     /**
-     * @param app Application Context.
+     * @param app            Application Context.
      * @param wakeUpInterval 定时唤醒的时间间隔(ms).
      */
-    public static void initialize(@NonNull Context app, @NonNull Class<? extends AbsWorkService> serviceClass, @Nullable Integer wakeUpInterval) {
+    public static void initialize(@NonNull Context app, @NonNull Class<? extends AbsWorkService> serviceClass,
+                                  @Nullable Integer wakeUpInterval) {
         sApp = app;
         sServiceClass = serviceClass;
         if (wakeUpInterval != null) sWakeUpInterval = wakeUpInterval;
@@ -50,7 +54,7 @@ public final class DaemonEnv {
                 if (!sInitialized) return;
                 sApp.bindService(i, this, Context.BIND_AUTO_CREATE);
             }
-            
+
             @Override
             public void onBindingDied(ComponentName name) {
                 onServiceDisconnected(name);
@@ -60,7 +64,10 @@ public final class DaemonEnv {
 
     static void startServiceSafely(Intent i) {
         if (!sInitialized) return;
-        try { sApp.startService(i); } catch (Exception ignored) {}
+        try {
+            sApp.startService(i);
+        } catch (Exception ignored) {
+        }
     }
 
     static int getWakeUpInterval() {

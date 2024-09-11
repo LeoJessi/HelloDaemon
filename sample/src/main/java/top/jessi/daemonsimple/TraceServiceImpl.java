@@ -1,14 +1,13 @@
-package com.xdandroid.sample;
+package top.jessi.daemonsimple;
 
-import android.content.*;
-import android.os.*;
+import android.content.Intent;
+import android.os.IBinder;
 
-import com.xdandroid.hellodaemon.*;
+import java.util.concurrent.TimeUnit;
 
-import java.util.concurrent.*;
-
-import io.reactivex.*;
-import io.reactivex.disposables.*;
+import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
+import top.jessi.hellodaemon.AbsWorkService;
 
 public class TraceServiceImpl extends AbsWorkService {
 

@@ -1,8 +1,8 @@
-package com.xdandroid.sample;
+package top.jessi.daemonsimple;
 
-import android.app.*;
+import android.app.Application;
 
-import com.xdandroid.hellodaemon.*;
+import top.jessi.hellodaemon.DaemonEnv;
 
 public class App extends Application {
 

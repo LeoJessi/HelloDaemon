@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xdandroid.sample">
+    package="top.jessi.daemonsimple">
 
     <application
-        android:name=".App"
+        android:name="top.jessi.daemonsimple.App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name">
 
         <activity
-            android:name=".MainActivity"
+            android:exported="true"
+            android:name="top.jessi.daemonsimple.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -17,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".TraceServiceImpl"/>
+        <service android:name="top.jessi.daemonsimple.TraceServiceImpl"/>
 
     </application>
 

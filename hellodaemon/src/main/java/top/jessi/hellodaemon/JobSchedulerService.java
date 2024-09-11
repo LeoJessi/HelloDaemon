@@ -1,14 +1,12 @@
-package com.xdandroid.hellodaemon;
+package top.jessi.hellodaemon;
 
-import android.annotation.*;
-import android.app.job.*;
-import android.os.*;
+import android.app.job.JobParameters;
+import android.app.job.JobService;
 
 /**
  * Android 5.0+ 使用的 JobScheduler.
  * 运行在 :watch 子进程中.
  */
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class JobSchedulerService extends JobService {
 
     @Override
